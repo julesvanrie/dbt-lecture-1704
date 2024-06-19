@@ -7,3 +7,7 @@ models:
         tests:
           - not_null
           - unique
+      - name: color
+        tests:
+          - dbt_utils.not_accepted_values:
+              values: ['BL', 'RD']
